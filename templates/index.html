@@ -6,6 +6,8 @@
 {% block scripts %}
 {{super()}}
   <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js"></script>
+  <script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script>
     const canvas = document.querySelector('#canvas');
     const signaturePad = new SignaturePad(canvas, {
@@ -28,9 +30,7 @@
   liff.init(function (data) {});
   });
 </script>
-<!-- Add -->
-<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
 <script>
  $('#btn').on('click', function() {
    $.ajax({
